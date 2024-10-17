@@ -12,7 +12,8 @@
     <button id="search">Search</button>
     <h5 id="release-date"></h5>
     <script>
-        var URL = "https://static.codehs.com/api/12345/movies/all";
+       
+            var URL = "https://static.codehs.com/api/12345/movies/all";
 
         //create click function 
         $("#search").click(function () {
@@ -25,19 +26,19 @@
         function findReleaseDate(movie) {
             $.getJSON(URL, function (data) {
                 //loop through data
-                for (var i = 0; i < data.objects.length; i++) {
+                for (var i = 0; i < data.length; i++) {
                         // If the search matches the name of a movie in the data
-                        if (data.objects[i].name.toLowerCase() === movie.toLowerCase()) {
-
-                            releaseDate = "Release Year: " + data.objects[i]["release-date"];
-                            break; // Stop the loop
+                        if (data[i].name.toLowerCase() === movie.toLowerCase()) {
+                             // add release date in the div 
+                            $("#release-date").text(data[i]["release-date"]);
                         }
                     }
 
-                    // add release date in the div 
-                    $("#release-date").text(releaseDate);
+
             });
         }
+
+                
     </script>
 </body>
 
