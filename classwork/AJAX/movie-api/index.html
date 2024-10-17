@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Movies</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src= "config.js"></script>
+</head>
+
+<body>
+    <h3>Enter a movie:</h3>
+    <input type="text" id="movie">
+    <button id="search">Search</button>
+    <h5 id="release-date"></h5>
+    <script>
+        //stretch goal omdb api 
+        var URL = "http://www.omdbapi.com/?apikey="+ apiKey + "&t=";
+        
+
+
+        //create click function 
+        $("#search").click(function () {
+            //This stores the user submitted movie
+            var movie = $("#movie").val();
+            $.ajax({
+                url: URL +   movie,
+                method: "GET",
+                success: function(data){
+                   if(data.Response === "True"){
+                    $("#release-date").append("Release Date: " + data.Released);
+                   }else 
+                   $("#release-date").append("Movie not found");
+
+                },
+                error: function(xhr, status, error){
+                    $("#release-data").append("Error retrieving movie data: " + status + " - " + error);
+
+                }
+                
+            })
+            
+        });
+
+        
+
+
+    </script>
+</body>
+
+</html>
