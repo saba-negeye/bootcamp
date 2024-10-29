@@ -1,4 +1,10 @@
 =begin 
+worked on this with partner
+Nadia 
+Saba 
+=end 
+
+=begin 
 1 #Create an if/else statement. 
 Make sure to include at least one elsif. 
 Each branch of the statement should print something to the console
