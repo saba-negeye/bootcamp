@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+
+</head>
+
+<body>
+    <div id=container>
+        <h1>My Phonebook</h1>
+        <div id=button-container>
+            <button id=add>Add Contact</button>
+            <button id=retrieve>Retrieve Contact</button>
+            <button id=print>Print Contacts</button>
+        </div>
+        <div id=contact-reveal></div>
+    </div>
+    <script>
+        //copy your code from the previous exercise
+        $("#add").click(function () {
+            addContact();
+        });
+        //retrieve/add function 
+        $("#retrieve").click(function () {
+            var firstName = prompt("What is your first name?");
+            var lastName = prompt("What is your last name?");
+
+            if (contactExists(firstName, lastName)) {
+                retrieveContact(firstName, lastName);
+            } else {
+                var newContact = prompt("Contact not found. Would you like to add this contact? (yes/no)");
+                if (newContact && newContact.toLowerCase() == "yes") {
+                    addContact();
+                } else {
+                    alert("You have chosen not to enter a new contact.");
+                }
+            }
+        });
+        //print function
+        $("#print").click(function () {
+            printContacts();
+        });
+
+        function addContact() {
+            //copy your code from the previous exercise
+            var userFirstName = prompt("What is your first name?");
+            var userLastName = prompt("What is your last name?");
+            var userNumber = prompt("What is your number?");
+
+            // Creating object
+            var person = {
+                firstName: userFirstName,
+                lastName: userLastName,
+                number: userNumber
+            };
+
+            // Storing object to localStorage
+            phonebook.push(person);
+            localStorage.setItem('phonebook', JSON.stringify(phonebook));
+        }
+
+
+
+        function contactExists(first, last) {
+            //copy your code from the previous exercise
+
+            for (var i = 0; i < phonebook.length; i++) {
+                if (first === phonebook[i].firstName && last === phonebook[i].lastName) {
+                    return true; // Contact found
+                }
+            }
+            return false; // Contact not found
+
+
+        }
+
+        function retrieveContact(first, last) {
+            //copy your code from the previous exercise
+
+            for (var i = 0; i < phonebook.length; i++) {
+                if (phonebook[i].firstName === first && phonebook[i].lastName === last) {
+                    // Display contact details
+                    $("#contact-reveal").text("Contact found: " + phonebook[i].firstName + " " + phonebook[i].lastName + ", Number: " + phonebook[i].number);
+                    return;
+                }
+            }
+        }
+
+
+        function printContacts() {
+            var allContacts = "";
+            if (phonebook.length === 0) {
+                allContacts = "No contacts found.";
+            } else {
+                // Loop through the phonebook and create a list of contacts
+                for (var i = 0; i < phonebook.length; i++) {
+                    allContacts += phonebook[i].firstName + " " + phonebook[i].lastName + ", Number: " + phonebook[i].number + "<br>";
+                }
+            }
+            $("#contact-reveal").append(allContacts); // print all contacts in contact-reveal div
+        }
+
+
+
+    </script>
+</body>
+
+</html>
