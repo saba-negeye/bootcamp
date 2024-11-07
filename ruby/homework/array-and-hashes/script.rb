@@ -10,7 +10,7 @@ fruits.push("kiwi")
 # 5 Remove "cherry" from the array.
 fruits.delete("cherry")
 # 6 Print the modified array.
-puts.fruit 
+puts "Modified Fruits: #{fruits}" 
 # 7 Check if "apple" is in the array and print the result. terniary operator used
 puts fruits.include?("apple") ? "apple is included" : "apple is not included"
 # 8 Calculate and print the total number of fruits in the fruits array.
