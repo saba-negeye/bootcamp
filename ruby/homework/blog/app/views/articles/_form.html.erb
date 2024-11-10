@@ -14,7 +14,11 @@
         <div><%= message %></div>
       <% end %>
     </div>
-  
+    
+    <div>
+    <%= form.label :category_id, "Category" %><br>
+    <%= form.select :category_id, Category.all.collect { |category| [category.name, category.id] }, { prompt: "Select a category" } %>
+    </div>
     <div>
       <%= form.submit %>
     </div>
