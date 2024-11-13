@@ -9,7 +9,7 @@
 - Category Article Count: The number of articles in each category is displayed next to the category name.
 
 # Tasks
-1. ake task needs to be run to back fill existing categoris with no description. run rails categories:backfill_description
+1. rake task needs to be run to back fill existing categoris with no description. run `rails categories:backfill_description`
 
 # Authentication 
 - The app uses basic authentication to restrict access to certain actions. Only signed-in users can create, edit, and delete categories and articles.
