@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
     resources :categories
+    resources :authors
 
     resources :articles do 
       resources :comments

@@ -1,0 +1,16 @@
+<h1><%= @author.name %></h1> 
+
+<p><%= @author.bio %></p>
+
+<h2> <%= @author.name %></h2>
+<h3> Articles <h3>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= article %> 
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back to authors', authors_path %>
+

@@ -24,7 +24,7 @@ class CategoriesController < ApplicationController
 
     def edit
         @category = Category.find(params[:id]) 
-      end
+    end
     
     def update
       @category = Category.find(params[:id]) 
@@ -39,7 +39,7 @@ class CategoriesController < ApplicationController
       @category = Category.find(params[:id])
       @category.destroy
 
-      redirect_to categories_path, status: :see_other
+      redirect_to @category
     end
   
     private
