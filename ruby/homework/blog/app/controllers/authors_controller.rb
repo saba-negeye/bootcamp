@@ -37,7 +37,7 @@ class AuthorsController < ApplicationController
         author = Author.find(params[:id])
         author.destroy
 
-        redirect_to @author
+        redirect_to authors_path
       end
 
       private

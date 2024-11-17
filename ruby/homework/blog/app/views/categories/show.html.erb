@@ -1,6 +1,11 @@
 <h1><%= @category.name %></h1>
 
 <p><%= @category.description %></p>
+<% if @category.image.attached? %>
+<%= image_tag @category.image, alt: @category.name, class: "category-image" %>
+<% else %>
+<p>No image uploaded for this category.</p>
+<% end %>
 
 <h3>Articles</h3>
 <ul>
@@ -10,6 +15,7 @@
     </li>
   <% end %>
 </ul>
+
 
 <%= link_to 'Back to Categories', @category %>
 <br>
