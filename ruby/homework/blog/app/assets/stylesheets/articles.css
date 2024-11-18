@@ -1,78 +1,77 @@
-
 body {
-    font-family: Arial;
-    background-color: gray;
-    color: black; 
-  }
-  
+  font-family: Arial;
+  background-color: gray;
+  color: black; 
+}
 
-  /*Header*/
-  h1 {
-    text-align: center;
-    color: black;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-  }
-  
-  /*Article list*/
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* list item */
-  li {
-    background-color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-  }
-  
-  li:hover {
-    background-color: lightgray; /* article turns light gray when hovered over */
-  }
-  
-  /* article title */
-  a {
-    color: black;
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  
-  /* Link to create new article */
-  .new-article-link{
-    display: block;
-    width: 200px;
-    margin: 30px auto;
-    background-color: lightgray;
-    color: black;
-    padding:  20px;
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-  }
 
-  .view-categories-link{
-    display: block;
-    width: 200px;
-    margin: 30px auto;
-    background-color: lightgray;
-    color: black;
-    padding:  20px;
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-  }
+/*Header*/
+h1 {
+  text-align: center;
+  color: black;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
 
-  .create-new-category{
-    display: block;
-    width: 200px;
-    margin: 30px auto;
-    background-color: lightgray;
-    color: black;
-    padding:  20px;
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-  }
+/*Article list*/
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* list item */
+li {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+li:hover {
+  background-color: lightgray; /* article turns light gray when hovered over */
+}
+
+/* article title */
+a {
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Link to create new article */
+.new-article-link{
+  display: block;
+  width: 200px;
+  margin: 30px auto;
+  background-color: lightgray;
+  color: black;
+  padding:  20px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.view-categories-link{
+  display: block;
+  width: 200px;
+  margin: 30px auto;
+  background-color: lightgray;
+  color: black;
+  padding:  20px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.create-new-category{
+  display: block;
+  width: 200px;
+  margin: 30px auto;
+  background-color: lightgray;
+  color: black;
+  padding:  20px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+}

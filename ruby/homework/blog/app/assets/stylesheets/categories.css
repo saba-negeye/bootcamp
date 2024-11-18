@@ -1,40 +1,39 @@
-
 body {
-    font-family: Arial;
-    background-color: gray;  
-    color: black; 
-  }
-  
-  h1 {
-    text-align: center;
-    color: black;
-    font-size: 3em;
-  }
-  
-  ul {
-    color: black;
-  }
-  
-  /* Category list items */
-  .category {
-    background-color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-  }
-  
-  /* Category title */
-  h2 {
-    color: black;
-    font-size: 1.8em;
-    margin: 0;
-  }
-  
-  /* Category description */
-  .category p {
-    color: gray;
-    font-size: 1.1em;
-    margin: 10px 0;
-  }
-  
-  
+  font-family: Arial;
+  background-color: gray;  
+  color: black; 
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  font-size: 3em;
+}
+
+ul {
+  color: black;
+}
+
+/* Category list items */
+.category {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+/* Category title */
+h2 {
+  color: black;
+  font-size: 1.8em;
+  margin: 0;
+}
+
+/* Category description */
+.category p {
+  color: gray;
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+
