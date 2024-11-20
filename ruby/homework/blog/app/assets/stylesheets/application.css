@@ -1,0 +1,11 @@
+.user-info-button {
+    background-color: #007bff; 
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /
+    font-size: 14px; 
+    font-family: Arial, sans-serif; 
+
+  }
+  

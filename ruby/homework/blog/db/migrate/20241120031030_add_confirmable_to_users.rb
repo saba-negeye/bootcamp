@@ -4,9 +4,7 @@ class AddConfirmableToUsers < ActiveRecord::Migration[7.2]
       t.string   :confirmation_token
       t.datetime :confirmed_at
       t.datetime :confirmation_sent_at
-      t.string   :unconfirmed_email # Only needed if using reconfirmable
+      t.string   :unconfirmed_email 
+      add_index :users, :confirmation_token, unique: true
     end
-
-    add_index :users, :confirmation_token, unique: true
-  end
 end
