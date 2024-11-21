@@ -1,28 +1,17 @@
-<% content_for :javascript do %>
-  <script type="module">
-    import "article";
-  </script>
-<% end %>
+<h1><%= @article.title %></h1>
 
-<div id="article-title">
-  <h1><%= @article.title %></h1>
-</div>
+<p><%= @article.body %></p>
 
+<ul>
+  <li><%= link_to "Edit", edit_article_path(@article) %></li>
+  <li><%= link_to "Destroy", article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
 
-<div id="article-toggle">
-  <p><%= @article.body %></p>
+<h2>Comments</h2>
+<%= render @article.comments %>
 
-  <ul>
-    <li><%= link_to "Edit", edit_article_path(@article) %></li>
-    <li><%= link_to "Destroy", article_path(@article), data: {
-                      turbo_method: :delete,
-                      turbo_confirm: "Are you sure?"
-                    } %></li>
-  </ul>
-
-  <h2>Comments</h2>
-  <%= render @article.comments %>
-
-  <h2>Add a comment:</h2>
-  <%= render "comments/form", article: @article %>
-</div>
+<h2>Add a comment:</h2>
+<%= render "comments/form", article: @article %>
