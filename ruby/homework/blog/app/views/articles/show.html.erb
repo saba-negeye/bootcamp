@@ -1,7 +1,14 @@
+# in other branch too 
+<% content_for :javascript do %>
+  <script type="module">
+    import "add_jquery";
+  </script>
+<% end %>
+
 <h1><%= @article.title %></h1>
-
+<button id="toggle-content-button"> More Info! </button>
+<div id= "article-content">
 <p><%= @article.body %></p>
-
 <ul>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
   <li><%= link_to "Destroy", article_path(@article), data: {
@@ -11,7 +18,15 @@
 </ul>
 
 <h2>Comments</h2>
+<div id= "comments">
+</div>
+
+<button id="load-comments" data-article="<%= @article.id %>" data-category="<%= @category.id %>">
+    More Comments
+</button>
+
 <%= render @article.comments %>
 
 <h2>Add a comment:</h2>
 <%= render "comments/form", article: @article %>
+</div>
