@@ -1,0 +1,61 @@
+/* Authors Index Page Styling */
+
+/* Heading */
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Author Listing */
+  .author {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;  /* Rounded corners */
+    border: 2px solid #3498db;  /* Blue border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .author h2 {
+    font-size: 1.8em;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .author em {
+    color: #888;
+    font-style: italic;
+    font-size: 1.1em;
+  }
+  
+  .author a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .author a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Create New Author Link */
+  a.create-author-link {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  a.create-author-link:hover {
+    background-color: #2980b9;
+  }
+  

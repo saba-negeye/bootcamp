@@ -1,0 +1,20 @@
+<h1>Categories</h1>
+<%= link_to "Create Category", new_category_path, class: "create-new-category" %>
+
+<% @categories.each do |category| %>
+  <div class="category">
+    <% if category.image.attached? %>
+      <%= image_tag category.image.variant(resize_to_fit: [500, 500]), alt: category.name %>
+    <% end %>
+
+    <h2>
+      <%= link_to category.name, category %> 
+      <em><%= category.articles.count %> articles</em>
+    </h2>
+
+    <p>
+      <em><%= category.description %></em>
+    </p> 
+  </div>
+<% end %>
+

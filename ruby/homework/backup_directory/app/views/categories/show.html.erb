@@ -1,0 +1,29 @@
+<h1><%= @category.name %></h1>
+
+<p><%= @category.description %></p>
+<% if @category.image.attached? %>
+<%= image_tag @category.image, alt: @category.name, class: "category-image" %>
+<% else %>
+<p>No image uploaded for this category.</p>
+<% end %>
+
+<h3>Articles</h3>
+<ul>
+  <% @category.articles.each do |article| %>
+    <li>
+    <%= link_to article.title, article %>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'Back to Categories', @category %>
+<br>
+<%= link_to 'Edit Category', edit_category_path(@category) %>
+<%= link_to "Delete", category_path(@category), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+
+
+                  

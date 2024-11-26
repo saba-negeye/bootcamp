@@ -1,4 +1,4 @@
-# in other branch too 
+
 <% content_for :javascript do %>
   <script type="module">
     import "add_jquery";
@@ -18,12 +18,9 @@
 </ul>
 
 <h2>Comments</h2>
-<div id= "comments">
-</div>
 
-<button id="load-comments" data-article="<%= @article.id %>" data-category="<%= @category.id %>">
-    More Comments
-</button>
+
+
 
 <%= render @article.comments %>
 

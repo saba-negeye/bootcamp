@@ -7,4 +7,6 @@ class AddConfirmableToUsers < ActiveRecord::Migration[7.2]
       t.string   :unconfirmed_email 
       add_index :users, :confirmation_token, unique: true
     end
+  end
 end
+

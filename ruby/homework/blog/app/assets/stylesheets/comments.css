@@ -1,0 +1,35 @@
+/* General Comment Styles */
+.commenter {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  .comment-body {
+    font-size: 1em;
+    color: #555;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #3498db;
+    margin-bottom: 10px;
+  }
+  
+  .comment-actions {
+    font-size: 0.9em;
+    text-align: right;
+  }
+  
+  .destroy-comment-link {
+    color: #e74c3c;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+  }
+  
+  .destroy-comment-link:hover {
+    background-color: #e74c3c;
+    color: white;
+  }
+  

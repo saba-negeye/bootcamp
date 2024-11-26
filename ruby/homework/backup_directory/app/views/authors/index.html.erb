@@ -1,0 +1,13 @@
+<h1>Authors</h1>
+
+<% @authors.each do |author| %>
+  <div class="author">
+    <h2>
+      <%= link_to author.name, author %> 
+      <em><%= author.articles.count %> articles</em>
+    </h2>
+  </div>
+<% end %>
+
+<%= link_to "Create New Author", new_author_path %>
+
