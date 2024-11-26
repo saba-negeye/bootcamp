@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
     resources :articles do 
       resources :comments
-    end
 
+    end
+    resources :donations, only: [:new, :create]
 end
