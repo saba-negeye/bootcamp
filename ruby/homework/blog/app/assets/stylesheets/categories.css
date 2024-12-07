@@ -37,3 +37,16 @@ h2 {
 }
 
 
+.create-new-category {
+  display: block;
+  width: 220px;
+  margin: 30px auto;
+  background-color: #007bff;  /* Blue background for buttons */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;  /* Remove underline */
+  transition: background-color 0.3s ease, transform 0.3s ease;  /* Smooth hover effect */
+}

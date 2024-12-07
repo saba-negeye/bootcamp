@@ -1,6 +1,5 @@
 
 <h1>Articles</h1>
-
 <ul>
   <% @articles.each do |article| %>
     <li>
@@ -13,4 +12,6 @@
 
 <%= link_to "New Article", new_article_path, class: "new-article-link" %>
 <%= link_to 'View Categories', categories_path, class: "view-categories-link"%>
+<%= link_to "Donate To Support Blog", new_donation_path, class: "new-article-link"%>
+<%= link_to "View Authors", authors_path, class: "new-article-link"%>
 <%= stylesheet_link_tag 'articles', media: 'all' %>

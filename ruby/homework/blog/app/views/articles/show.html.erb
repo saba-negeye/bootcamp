@@ -9,7 +9,7 @@
 <button id="toggle-content-button"> More Info! </button>
 <div id= "article-content">
 <p><%= @article.body %></p>
-<ul>
+<ul class="article-actions">
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
   <li><%= link_to "Destroy", article_path(@article), data: {
                     turbo_method: :delete,
